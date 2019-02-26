@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="https://ose-test.com/ol-ti-itcpe/billService?wsdl" uri="src/conf/xml-resources/web-services/OseTest/wsdl/ose-test.com/ol-ti-itcpe/billService.wsdl"/>
-    <system systemId="https://ose-test.com/ol-ti-itcpe/billService.svc?wsdl=wsdl0" uri="src/conf/xml-resources/web-services/OseTest/wsdl/ose-test.com/ol-ti-itcpe/billService.svc.wsdl_wsdl0.wsdl"/>
-    <system systemId="https://ose-test.com/ol-ti-itcpe/billService.svc?xsd=xsd0" uri="src/conf/xml-resources/web-services/OseTest/wsdl/ose-test.com/ol-ti-itcpe/billService.svc.xsd_xsd0.xsd"/>
+    <system systemId="https://ose-test.com/ol-ti-itcpe/billService?wsdl" uri="src/conf/xml-resources/web-service-references/billService/wsdl/ose-test.com/ol-ti-itcpe/billService.wsdl"/>
+    <system systemId="https://ose-test.com/ol-ti-itcpe/billService.svc?wsdl=wsdl0" uri="src/conf/xml-resources/web-service-references/billService/wsdl/ose-test.com/ol-ti-itcpe/billService.svc.wsdl_wsdl0.wsdl"/>
+    <system systemId="https://ose-test.com/ol-ti-itcpe/billService.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/billService/wsdl/ose-test.com/ol-ti-itcpe/billService.svc.xsd_xsd0.xsd"/>
 </catalog>

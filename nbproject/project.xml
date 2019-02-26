@@ -4,11 +4,11 @@
     <configuration>
         <buildExtensions xmlns="http://www.netbeans.org/ns/ant-build-extender/1">
             <extension file="jaxws-build.xml" id="jaxws">
-                <dependency dependsOn="wsimport-service-generate" target="-pre-pre-compile"/>
+                <dependency dependsOn="wsimport-client-generate" target="-pre-pre-compile"/>
             </extension>
         </buildExtensions>
         <data xmlns="http://www.netbeans.org/ns/j2ee-ejbjarproject/3">
-            <name>EJBModule1</name>
+            <name>JAX</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <included-library dirs="200">file.reference.org-apache-commons-codec.jar</included-library>
             <source-roots>

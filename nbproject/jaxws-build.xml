@@ -24,27 +24,22 @@
             <classpath path="${j2ee.platform.wsimport.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsimport-service-OseTest" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/service/OseTest"/>
-        <property name="service-wsdl-OseTest" location="${meta.inf}/xml-resources/web-services/OseTest/wsdl/ose-test.com/ol-ti-itcpe/billService.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/service/OseTest" destdir="${build.generated.dir}/jax-wsCache/service/OseTest" wsdl="${service-wsdl-OseTest}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" xnocompile="true" xendorsed="true">
-            <depends file="${wsdl-OseTest}"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/service/OseTest"/>
+    <target name="wsimport-client-billService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/billService"/>
+        <property name="wsdl-billService" location="${meta.inf}/xml-resources/web-service-references/billService/wsdl/ose-test.com/ol-ti-itcpe/billService.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/billService" destdir="${build.generated.dir}/jax-wsCache/billService" wsdl="${wsdl-billService}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="https://ose-test.com/ol-ti-itcpe/billService?wsdl" xnocompile="true" xendorsed="true" package="TEST" target="2.1">
+            <depends file="${wsdl-billService}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/billService"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/service/OseTest">
+            <fileset dir="${build.generated.dir}/jax-wsCache/billService">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
-        <property name="targetLocation-OseTest" location="${meta.inf}/wsdl/OseTest"/>
-        <property name="sourceLocation-OseTest" location="${meta.inf}/xml-resources/web-services/OseTest/wsdl/"/>
-        <copy todir="${targetLocation-OseTest}">
-            <fileset dir="${sourceLocation-OseTest}"/>
-        </copy>
     </target>
-    <target name="wsimport-service-clean-OseTest" depends="-init-project">
-        <delete dir="${build.generated.dir}/jax-wsCache/service/OseTest"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/org/tempuri"/>
+    <target name="wsimport-client-clean-billService" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/billService"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/TEST"/>
     </target>
-    <target name="wsimport-service-generate" depends="wsimport-service-OseTest"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-billService"/>
 </project>
